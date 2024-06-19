@@ -154,7 +154,7 @@ model_pipeline = Pipeline(steps=[
 # Define the parameter search space for Random Forest
 search_spaces = {
     'regressor__n_estimators': Integer(50, 200),
-    'regressor__max_features': Categorical(['auto', 'sqrt', 'log2']),
+    'regressor__max_features': Categorical([None, 'sqrt', 'log2']),
     'regressor__max_depth': Categorical([None, 10, 20, 30]),
     'regressor__min_samples_split': Integer(2, 10),
     'regressor__min_samples_leaf': Integer(1, 4)
